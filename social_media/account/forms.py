@@ -3,8 +3,8 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
 class UserRegistrationForm(forms.Form):
-    username = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
-    email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-control'}))
+    username = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'your name'}))
+    email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'test@example.com'}))
     password1 = forms.CharField(label="password",widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder':'your_Password'}))
     password2 = forms.CharField(label="confirmed password",widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder':'your_Password'}))
     
