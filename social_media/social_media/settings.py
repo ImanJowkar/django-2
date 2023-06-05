@@ -112,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tehran'
 
 USE_I18N = True
 
@@ -134,3 +134,14 @@ AUTHENTICATION_BACKENDS = [
     'account.authenticate.EmailBackend',
     ]
 LOGIN_URL = '/account/login'
+
+
+
+# Email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'user@gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_PASSWORD = 'password'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'Company Co.'
