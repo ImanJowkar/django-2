@@ -9,7 +9,7 @@
 {% block content %}
 <h2> User Login </h2>
 <p> Insert your information for Login </p>
-
+<a href='{% url 'account:password-reset' %}', class='btn btn-info'> forget password </a>
 <form method="post" action="" class="col-md-6" novalidate>
     {% csrf_token %}
     {{ form.as_p }}

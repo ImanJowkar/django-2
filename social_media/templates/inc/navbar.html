@@ -5,6 +5,7 @@
         {% if request.user.is_authenticated %}
         
           <a class="navbar-brand" href="{% url 'account:user-logout' %}">Logout</a>
+          <a class="navbar-brand" href="{% url 'account:user-profile' request.user.id %}">profile</a>
         {% else %}
           <a class="navbar-brand" href="{% url 'account:user-register' %}">Register</a>
           <a class="navbar-brand" href="{% url 'account:user-login' %}">Login</a>
