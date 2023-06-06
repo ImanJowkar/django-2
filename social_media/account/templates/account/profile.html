@@ -15,7 +15,15 @@ profile {{  user.username }}
 {% endif %}
 
 
+{% if request.user.id != user.id and not is_following %}
     
+<a href="{% url 'account:user-follow' user.id %}", class='btn btn-info'> follow </a>
+    
+{% elif request.user.id != user.id and  is_following %}
+
+<a href="{% url 'account:user-unfollow' user.id %}", class='btn btn-info'> unfollow </a>
+
+{% endif %}
 
 <div class='card'>
     {% for post in posts %}
