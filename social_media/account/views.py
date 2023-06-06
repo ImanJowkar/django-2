@@ -1,15 +1,14 @@
-from typing import Any
 from django import http
 from django.shortcuts import render, redirect, get_list_or_404, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.views import View
-from . import forms
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from home.models import Post
 from django.contrib.auth import views as auth_views
+from . import forms
 
 
 # Create your views here.

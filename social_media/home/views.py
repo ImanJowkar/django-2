@@ -1,12 +1,11 @@
-from typing import Any
 from django import http
 from django.shortcuts import redirect, render, get_object_or_404
 from django.views import View
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
-from . import models
-from .forms import PostCreateUpdateForm
 from django.utils.text import slugify
+from .forms import PostCreateUpdateForm
+from . import models
 # Create your views here.
 
 class HomeView(View):
